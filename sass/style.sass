@@ -1,6 +1,32 @@
+$size: 25px
 *
   box-sizing: border-box
   margin: 0
   padding: 0
+
+body
+  background: #000
+  padding: $size
+  position: relative
+  .meta
+    position: absolute
+    top: ($size/1.5)/5
+    color: #888
+    font-size: $size/1.5
+    &#title
+      left: $size*1.5
+    &#link
+      right: $size*1.5
+      text-align: right
+
+
 iframe
   border: 0
+
+
+main
+  background: #fff
+  height: 100%
+  border-radius: (floor($size/2))
+  > *
+    border-radius: inherit
