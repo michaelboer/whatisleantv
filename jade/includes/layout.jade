@@ -1,0 +1,11 @@
+include config.jade
+- var idStr = ''
+each video in videos
+  - idStr += video + ','
+- idStr = idStr.slice(videos[0].length+1, idStr.length-1)
+html
+  head
+    link(rel='stylesheet', href='css/style.css')
+    title Dad's Custom Playlist
+  body
+    main: block content
