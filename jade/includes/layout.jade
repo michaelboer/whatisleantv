@@ -1,13 +1,14 @@
 include config.jade
 block vars
+  
 - var idStr = ''
 each video in videos
   - idStr += video + ','
 - idStr = idStr.slice(videos[0].length+1, idStr.length-1)
 
-
 html
   head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     link(rel='stylesheet', href='/css/style.css')
     title whatisleantv
   body
@@ -15,5 +16,11 @@ html
     p.meta#link=link
     main
       iframe(src!='https://www.youtube.com/embed/#{videos[0]}?rel=0&showinfo=1&playlist=#{idStr}' allowfullscreen='')
-      include ../../menu.svg
-      p=guide_name
+      #test
+        include ../../menu.svg
+        p=guide_name
+      nav: ul
+        each item in nav
+          li: a(href='../channel/' + item.toLowerCase().split(' ').join('-')+ '.html')=item
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="/js/menu.js")
