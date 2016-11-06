@@ -16,10 +16,10 @@ html
     p.meta#link=link
     main
       iframe(src!='https://www.youtube.com/embed/#{videos[0]}?rel=0&showinfo=1&playlist=#{idStr}' allowfullscreen='')
-      include ../../img/menu.svg
       p=guide_name
+      include ../../img/menu.svg
       nav: ul
         each item in nav
           li: a(href='../channel/' + item.toLowerCase().split(' ').join('-')+ '.html')=item
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-    script(src="/js/menu.js")
+    script(src="/js/menu.min.js")
