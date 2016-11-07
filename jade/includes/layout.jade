@@ -1,6 +1,6 @@
 include config.jade
 block vars
-  
+
 - var idStr = ''
 each video in videos
   - idStr += video + ','
@@ -11,6 +11,7 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     link(rel='stylesheet', href='/css/style.css')
     title whatisleantv
+    include analytics.jade
   body
     p.meta#title=title
     p.meta#link=link
