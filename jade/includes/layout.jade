@@ -8,7 +8,7 @@ each video in videos
 
 html
   head
-    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/css/style.css')
     title whatisleantv
     include analytics.jade
@@ -16,11 +16,11 @@ html
     p.meta#title=title
     p.meta#link=link
     main
-      iframe(src!='https://www.youtube.com/embed/#{videos[0]}?rel=0&showinfo=1&playlist=#{idStr}' allowfullscreen='')
+      iframe(src='https://www.youtube.com/embed/videoseries?list=#{playlist}' allowfullscreen='')
       p=guide_name
       include ../../img/menu.svg
       nav: ul
         each item in nav
           li: a(href='../channel/' + item.toLowerCase().split(' ').join('-'))=item
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
-    script(src="/js/menu.min.js")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='/js/menu.min.js')
