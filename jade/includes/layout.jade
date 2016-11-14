@@ -11,7 +11,7 @@ html
     p.meta#title=title
     p.meta#link=link
     main
-      iframe(src='https://www.youtube.com/embed/videoseries?list=#{playlist}' allowfullscreen='')
+      iframe(src=playlist allowfullscreen='')
       p=guide_name
       include ../../img/menu.svg
       nav: ul
