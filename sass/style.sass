@@ -1,4 +1,17 @@
 $size: 25px
+$theme: #888
+$theme: pink
+
+@function contrast($n)
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000)
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000)
+
+  @if abs($color-brightness) < ($light-color/2)
+    @return white
+
+  @else
+    @return black
+
 *
   box-sizing: border-box
   margin: 0
@@ -6,13 +19,13 @@ $size: 25px
 
 body
   height: calc(100vh - (2 * #{$size}))
-  background: #000
+  background: invert(contrast($theme))
   padding: $size
     top: 0
   position: fixed
 
   .meta
-    color: #888
+    color: $theme
     font-size: (2/3)*$size
     transform: translateY(.5em)
     &#link
@@ -20,7 +33,7 @@ body
       transform: translateY(-100%) translateY(.5em)
 iframe
   border: 0
-  width:88%
+  width: 88%
   height: 88%
 
 main
@@ -43,19 +56,19 @@ svg
   transform: scaleY(-1)
   width: $size
   height: $size
-  fill: #888
+  fill: $theme
 main p
   position: fixed
   opacity: 1
   right: 4.2em
   bottom: 33px
-  color: #888
+  color: $theme
   font-size: (2/3)*$size
 
 
 nav
   position: absolute
-  color: #888
+  color: $theme
   right: 30px
   opacity: 0
   overflow: hidden
@@ -73,10 +86,9 @@ nav
     display: block
     padding: .5em
     text-decoration: none
-    color: #888
+    color: $theme
     &:hover
-      background: #333
-
+      background: mix(#000, $theme, 62)
 .visible
   pointer-events: all
   opacity: 1
