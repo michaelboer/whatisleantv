@@ -1,15 +1,17 @@
 $size: 25px
 $theme: #888
+$squish-factor: 85
+
 
 @function contrast($n)
   $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000)
-  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000)
+  $light-color: round((red(#fff) * 299) + (green(#fff) * 587) + (blue(#fff) * 114) / 1000)
 
   @if abs($color-brightness) < ($light-color/2)
-    @return white
+    @return #fff
 
   @else
-    @return black
+    @return #000
 
 *
   box-sizing: border-box
@@ -17,7 +19,7 @@ $theme: #888
   padding: 0
 
 body
-  height: calc(100vh - (2 * #{$size}))
+  height: 100vh - (2 * #{$size})
   background: contrast($theme)
   padding: $size
     top: 0
@@ -31,9 +33,13 @@ body
       text-align: right
       transform: translateY(-100%) translateY(.5em)
 iframe
+  transition: 0.7s transform ease-in-out
   border: 0
   width: 88%
   height: 88%
+  &.squish
+    transform: scale($squish-factor/100)
+
 
 main
   display: flex
@@ -72,7 +78,7 @@ nav
   opacity: 0
   overflow: hidden
   bottom: -3px
-  transition: 0.7s all
+  transition: 0.7s all ease-in-out
   pointer-events: none
 
   ul
@@ -80,10 +86,9 @@ nav
     display: flex
     flex: 1
     flex-direction: column
-    margin-right: -20px
-    z-index: 20
   a
-    text-align: left
+    text-align: right
+    font-size: 1.5em
     display: block
     padding: .5em
     text-decoration: none
@@ -94,3 +99,4 @@ nav
   pointer-events: all
   opacity: 1
   bottom: 15px
+  background: invert(#fff)

@@ -11,7 +11,7 @@ html(lang='en')
     p.meta#title=title
     p.meta#link=link
     main
-      iframe(src=playlist allowfullscreen='')
+      iframe(src=playlist + '&autoplay=1' allowfullscreen='')
       #about
       p=guide_name
       include ../../img/menu.svg
@@ -24,4 +24,4 @@ html(lang='en')
             li: a(href='../channel/' + item.toLowerCase().split(' ').join('-'))=item
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-    script(src='/js/menu.min.js')
+    script(src='/js/menu.js')
