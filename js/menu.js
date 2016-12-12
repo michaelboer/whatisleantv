@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('svg, main p').click(function() {
-    $('nav').toggleClass('visible');
+    $('nav ul').toggleClass('visible');
     $('iframe').toggleClass('squish');
   });
 });

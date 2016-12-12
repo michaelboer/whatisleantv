@@ -11,17 +11,17 @@ html(lang='en')
     p.meta#title=title
     p.meta#link=link
     main
-      iframe(src=playlist + '&autoplay=1' allowfullscreen='')
-      #about
+      iframe(src!=playlist + '&autoplay=1' allowfullscreen='')
       p=guide_name
-      include ../../img/menu.svg
-      nav: ul
-        if indev
-          each item in nav
-            li: a(href='../channel/' + item.toLowerCase().split(' ').join('-') + '.html')=item
-        else
-          each item in nav
-            li: a(href='../channel/' + item.toLowerCase().split(' ').join('-'))=item
+      nav
+        include ../../img/menu.svg
+        ul
+          if indev
+            each item in nav
+              li: a(href='../channel/' + item.toLowerCase().split(' ').join('-') + '.html')=item
+          else
+            each item in nav
+              li: a(href='../channel/' + item.toLowerCase().split(' ').join('-'))=item
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='/js/menu.js')

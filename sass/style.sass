@@ -1,37 +1,9 @@
-$size: 25px
-$theme: #888
-$squish-factor: 85
+@import 'partials/config'
+@import 'partials/functions'
+@import 'partials/frame'
+@import 'partials/navigation'
 
 
-@function contrast($n)
-  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000)
-  $light-color: round((red(#fff) * 299) + (green(#fff) * 587) + (blue(#fff) * 114) / 1000)
-
-  @if abs($color-brightness) < ($light-color/2)
-    @return #fff
-
-  @else
-    @return #000
-
-*
-  box-sizing: border-box
-  margin: 0
-  padding: 0
-
-body
-  height: 100vh - (2 * #{$size})
-  background: contrast($theme)
-  padding: $size
-    top: 0
-  position: fixed
-
-  .meta
-    color: $theme
-    font-size: (2/3)*$size
-    transform: translateY(.5em)
-    &#link
-      text-align: right
-      transform: translateY(-100%) translateY(.5em)
 iframe
   transition: 0.7s transform ease-in-out
   border: 0
@@ -40,28 +12,6 @@ iframe
   &.squish
     transform: scale($squish-factor/100)
 
-
-main
-  display: flex
-  justify-content: center
-  align-items: center
-  height: 100%
-  width: calc(100vw - #{$size*2})
-  border-radius: (floor($size/2))
-  overflow-y: scroll
-
-
-::-webkit-scrollbar
-  width: 0
-
-svg
-  position: fixed
-  bottom: 30px
-  right: 30px
-  transform: scaleY(-1)
-  width: $size
-  height: $size
-  fill: $theme
 main p
   position: fixed
   opacity: 1
@@ -69,34 +19,3 @@ main p
   bottom: 33px
   color: $theme
   font-size: (2/3)*$size
-
-
-nav
-  position: absolute
-  color: $theme
-  right: 30px
-  opacity: 0
-  overflow: hidden
-  bottom: -3px
-  transition: 0.7s all ease-in-out
-  pointer-events: none
-
-  ul
-    list-style: none
-    display: flex
-    flex: 1
-    flex-direction: column
-  a
-    text-align: right
-    font-size: 1.5em
-    display: block
-    padding: .5em
-    text-decoration: none
-    color: $theme
-    &:hover
-      background: mix(#000, $theme, 62)
-.visible
-  pointer-events: all
-  opacity: 1
-  bottom: 15px
-  background: invert(#fff)

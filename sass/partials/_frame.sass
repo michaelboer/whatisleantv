@@ -1,0 +1,26 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  height: 100vh - (2 * #{$size})
+  background: contrast($theme)
+  position: fixed
+  padding: $size
+  top: 0
+  .meta
+    color: $theme
+    font-size: (2/3)*$size
+    transform: translateY(.5em)
+  #link
+    text-align: right
+    transform: translateY(-100%) translateY(.5em)
+
+main
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+  width: calc(100vw - #{$size*2})
+  border-radius: (floor($size/2))

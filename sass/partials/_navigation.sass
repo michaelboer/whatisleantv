@@ -1,0 +1,37 @@
+svg
+  position: fixed
+  bottom: 30px
+  right: 30px
+  transform: scaleY(-1)
+  width: $size
+  height: $size
+  fill: $theme
+nav
+  .visible
+    pointer-events: all
+    opacity: 1
+    bottom: 15px
+  ul
+    position: absolute
+    color: $theme
+    right: 30px
+    opacity: 0
+    overflow-y: scroll
+    bottom: -3px
+    pointer-events: none
+    list-style: none
+    transition: 0.7s all ease-in-out
+    display: flex
+    flex: 1
+    flex-direction: column
+    height: 400px
+
+  a
+    text-align: right
+    font-size: 1.5em
+    display: block
+    padding: .5em
+    text-decoration: none
+    color: $theme
+    &:hover
+      background: mix(#000, $theme, 62)
