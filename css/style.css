@@ -56,7 +56,7 @@ nav ul {
   color: #888;
   right: 30px;
   opacity: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   bottom: -3px;
   pointer-events: none;
   list-style: none;

@@ -16,7 +16,7 @@ html(lang='en')
       nav
         include ../../img/menu.svg
         ul
-          if indev == true
+          if indev
             each item in nav
               li: a(href='../channel/' + item.toLowerCase().split(' ').join('-') + '.html')=item
           else
