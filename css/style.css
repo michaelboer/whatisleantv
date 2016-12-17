@@ -15,11 +15,6 @@ body {
     -webkit-transform: translateY(0.5em);
     -ms-transform: translateY(0.5em);
     transform: translateY(0.5em); }
-  body #link {
-    text-align: right;
-    -webkit-transform: translateY(-100%) translateY(0.5em);
-    -ms-transform: translateY(-100%) translateY(0.5em);
-    transform: translateY(-100%) translateY(0.5em); }
 
 main {
   display: -webkit-flex;
