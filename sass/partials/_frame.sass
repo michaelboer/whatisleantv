@@ -5,14 +5,20 @@
 
 body
   height: 100vh - (2 * #{$size})
-  width: 100vh
   background: contrast($theme)
   padding: $size
   top: 0
-  #title
-    color: $theme
-    font-size: (2/3)*$size
-    transform: translateY(.5em)
+  overflow: hidden
+
+%meta
+  position: absolute
+  bottom: 33px
+  color: $theme
+  font-size: (2/3)*$size
+
+#title
+  @extend %meta
+  transform: translateY(.5em)
 
 main
   display: flex
@@ -21,10 +27,16 @@ main
   height: 100%
   width: calc(100vw - #{$size*2})
   border-radius: (floor($size/2))
-  p
-    position: absolute
-    opacity: 1
-    right: 4.2em
-    bottom: 33px
-    color: $theme
-    font-size: (2/3)*$size
+
+#guide_text
+  @extend %meta
+  right: 4.2em
+
+iframe
+  transition: 0.7s transform ease-in-out
+  border: 0
+  width: $video-scale
+  height: $video-scale
+  position: absolute
+  &.squish
+    transform: scale($squish-factor/100)

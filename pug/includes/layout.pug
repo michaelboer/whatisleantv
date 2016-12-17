@@ -8,10 +8,10 @@ html(lang='en')
     title whatisleantv
     include analytics.pug
   body
-    p.meta#title=title
+    p#title=title
     main
       iframe(src!=playlist + '&autoplay=1' allowfullscreen='')
-      p=guide_name
+      p#guide_text=guide_name
       nav
         include ../../img/menu.svg
         ul

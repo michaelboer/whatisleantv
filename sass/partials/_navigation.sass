@@ -10,21 +10,21 @@ nav
   .visible
     pointer-events: all
     opacity: 1
-    bottom: 12%
+    bottom: 4.75em
   ul
+    display: flex
     position: absolute
-    color: $theme
     right: 30px
+    bottom: 2em
+    color: $theme
     opacity: 0
     overflow-y: auto
-    bottom: -3px
     pointer-events: none
     list-style: none
     transition: 0.7s all ease-in-out
-    display: flex
+    max-height: 400px
     flex: 1
-    flex-direction: column
-    height: 400px
+      direction: column
 
   a
     text-align: right
