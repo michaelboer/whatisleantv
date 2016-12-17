@@ -7,8 +7,11 @@
 iframe
   transition: 0.7s transform ease-in-out
   border: 0
-  width: 88%
-  height: 88%
+  width: 75%
+  height: 75%
+  position: absolute
+
+
   &.squish
     transform: scale($squish-factor/100)
 
@@ -19,3 +22,7 @@ main p
   bottom: 33px
   color: $theme
   font-size: (2/3)*$size
+
+#title
+  position: absolute
+  bottom: 33px

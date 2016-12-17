@@ -9,7 +9,6 @@ html(lang='en')
     include analytics.pug
   body
     p.meta#title=title
-    p.meta#link=link
     main
       iframe(src!=playlist + '&autoplay=1' allowfullscreen='')
       p=guide_name
