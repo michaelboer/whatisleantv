@@ -12,8 +12,8 @@ html(lang='en')
     main
       iframe(src!=playlist + '&autoplay=1' allowfullscreen='')
       p#guide_text=guide_name
+      include ../../img/menu.svg
       nav
-        include ../../img/menu.svg
         ul
           if indev
             each item in nav

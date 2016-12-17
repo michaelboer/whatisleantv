@@ -4,9 +4,9 @@
   padding: 0; }
 
 body {
-  height: 100vh-2 * 25px;
+  height: 100vh-2 * 1.5em;
   background: #000;
-  padding: 25px;
+  padding: 1.5em;
   top: 0;
   overflow: hidden; }
 
@@ -14,12 +14,7 @@ body {
   position: absolute;
   bottom: 33px;
   color: #888;
-  font-size: 16.66667px; }
-
-#title {
-  -webkit-transform: translateY(0.5em);
-  -ms-transform: translateY(0.5em);
-  transform: translateY(0.5em); }
+  font-size: 1em; }
 
 main {
   display: -webkit-flex;
@@ -32,8 +27,8 @@ main {
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
-  width: calc(100vw - 50px);
-  border-radius: 12px; }
+  width: calc(100vw - 3em);
+  border-radius: 0em; }
 
 #guide_text {
   right: 4.2em; }
@@ -52,14 +47,14 @@ iframe {
     transform: scale(0.85); }
 
 svg {
-  position: fixed;
-  bottom: 30px;
+  position: absolute;
+  bottom: 33px;
   right: 30px;
   -webkit-transform: scaleY(-1);
   -ms-transform: scaleY(-1);
   transform: scaleY(-1);
-  width: 25px;
-  height: 25px;
+  width: 1.5em;
+  height: 1.5em;
   fill: #888; }
 
 nav .visible {
@@ -80,7 +75,7 @@ nav ul {
   pointer-events: none;
   list-style: none;
   transition: 0.7s all ease-in-out;
-  max-height: 400px;
+  max-height: 70vh;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -97,3 +92,5 @@ nav a {
   color: #888; }
   nav a:hover {
     background: #343434; }
+
+/*# sourceMappingURL=style.css.map */
