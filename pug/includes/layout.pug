@@ -21,12 +21,12 @@ html(lang='en')
       include ../../img/menu.svg
       nav
         ul
-          if indev
+          if index
             each item in nav
-              li: a(href='/channel/' + item.toLowerCase().split(' ').join('-') + '.html')=item
+              li: a(href='channel/' + item.toLowerCase().split(' ').join('-'))=item
           else
             each item in nav
-              li: a(href='/channel/' + item.toLowerCase().split(' ').join('-'))=item
+              li: a(href='../channel/' + item.toLowerCase().split(' ').join('-'))=item
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='/js/menu.js')
