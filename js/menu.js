@@ -6,6 +6,5 @@ $(document).ready(function() {
 
   $('#title').click(function() {
     $('#about').toggleClass('visible');
-
   });
 });
