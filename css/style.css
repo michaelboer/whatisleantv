@@ -10,11 +10,12 @@ body {
   top: 0;
   overflow: hidden; }
 
-#title, #guide_text {
+#title, #guide_text, #about {
   position: absolute;
   bottom: 33px;
   color: #888;
-  font-size: 1em; }
+  font-size: 1em;
+  cursor: pointer; }
 
 main {
   display: -webkit-flex;
@@ -55,7 +56,8 @@ svg {
   transform: scaleY(-1);
   width: 1.5em;
   height: 1.5em;
-  fill: #888; }
+  fill: #888;
+  cursor: pointer; }
 
 nav .visible {
   pointer-events: all;
@@ -92,5 +94,18 @@ nav a {
   color: #888; }
   nav a:hover {
     background: #343434; }
+
+#about {
+  padding: .5em;
+  display: block;
+  bottom: 80px;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  cursor: auto;
+  transition: 0.7s opacity ease-in-out;
+  width: 30vw;
+  z-index: 1; }
+  #about.visible {
+    opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
