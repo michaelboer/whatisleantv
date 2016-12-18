@@ -18,6 +18,7 @@ html(lang='en')
     main
       iframe(src!=playlist + '&autoplay=1' allowfullscreen='')
       p#guide_text=guide_name
+
       include ../../img/menu.svg
       nav
         ul
@@ -29,4 +30,7 @@ html(lang='en')
               li: a(href='../channel/' + item.toLowerCase().split(' ').join('-'))=item
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-    script(src='/js/menu.js')
+    if index
+      script(src='js/menu.js')
+    else
+      script(src='../js/menu.js')
