@@ -3,7 +3,11 @@ block vars
 
 html(lang='en')
   head
-    link(rel='stylesheet', href='../css/style.css')
+    if index
+      link(rel='stylesheet', href='../css/style.css')
+    else
+      link(rel='stylesheet', href='/css/style.css')
+
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title whatisleantv
     include analytics.pug
