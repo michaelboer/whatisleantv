@@ -3,27 +3,3 @@
 @import 'partials/frame'
 @import 'partials/navigation'
 @import 'partials/about'
-
-#about
-  @extend %meta
-  max-height: 80%
-  padding: .5em
-  display: block
-  bottom: 80px
-  background: fade-out(black, 0.4)
-  opacity: 0
-  cursor: auto
-  transition: 0.7s opacity ease-in-out
-  width: 30%
-  z-index: 1
-  overflow-y: auto
-  *
-    font-size: .9rem
-    white-space: pre-wrap
-
-  &.visible
-    opacity: 1
-
-#about p:not(:last-child)
-  &::after
-    content: '\A\A'
