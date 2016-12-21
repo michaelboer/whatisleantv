@@ -4,7 +4,11 @@ block vars
 html(lang='en')
   head
     link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
-    link(rel='stylesheet', href='/#{basedir}/css/style.css')
+    if index
+      link(rel='stylesheet', href='css/style.css')
+    else
+      link(rel='stylesheet', href='../css/style.css')
+
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title whatisleantv
     include analytics.pug
@@ -18,7 +22,15 @@ html(lang='en')
       include ../../img/menu.svg
       nav
         ul
-          each item in nav
-            li: a(href='/#{basedir}/channel/' + item.toLowerCase().split(' ').join('-'))=item
+          if index
+            each item in nav
+              li: a(href='channel/' + item.toLowerCase().split(' ').join('-'))=item
+          else
+            each item in nav
+              li: a(href='../channel/' + item.toLowerCase().split(' ').join('-'))=item
+
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-    script(src='js/menu.js')
+    if index
+      script(src='js/menu.js')
+    else
+      script(src='../js/menu.js')
