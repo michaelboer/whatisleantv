@@ -1,4 +1,3 @@
 nav: ul
-  li: a(href='#') Lectures
-  li: a(href='#') Shorts
-  li: a(href='#') Wiki
+  each item in nav
+    li: a(href=item.toLowerCase())=item
