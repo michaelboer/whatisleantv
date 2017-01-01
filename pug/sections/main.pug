@@ -1,5 +1,6 @@
 main
-  //- TODO: Add grid here
-  .container
-    each item in selected
-      .item= item.title
+  each item in selected
+    .item
+      img(src=item.thumbnail)
+      p.title=item.title
+      p.desc=item.desc
