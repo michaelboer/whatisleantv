@@ -1,0 +1,16 @@
+block vars
+include ../includes/config.pug
+include ../includes/logic.pug
+html
+  head
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href=path + 'css/channel.css', rel='stylesheet')
+  body
+    include ../sections/header.pug
+    if special
+      a.material-icons(href='lectures') chevron_left
+    else
+      a.material-icons(href='./') chevron_left
+    main
+      iframe(src=playlistId + '&autoplay=1')
