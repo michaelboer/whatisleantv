@@ -8,9 +8,5 @@ html
     link(href=path + 'css/channel.css', rel='stylesheet')
   body
     include ../sections/header.pug
-    if special
-      a.material-icons(href='lectures') chevron_left
-    else
-      a.material-icons(href='./') chevron_left
     main
       iframe(src=playlistId + '&autoplay=1')
