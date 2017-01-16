@@ -1,9 +1,9 @@
-pug/includes/logic.pug
-pug/includes/analytics.pug
-pug/layouts
-pug/sections
+# pug/includes/logic.pug
+# pug/includes/analytics.pug
+# pug/layouts
+# pug/sections
 
 js
 img
-# sass
+sass
 css
