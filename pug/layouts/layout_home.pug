@@ -5,12 +5,12 @@ include ../includes/logic.pug
 doctype html
 html(lang='en')
   head
+    meta(name='viewport' content='width=device-width, initial-scale=1')
     link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
     link(rel='stylesheet', href=path + 'css/style.css')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
     title whatisleantv
     include ../includes/analytics.pug
   body
     include ../sections/header.pug
-    include ../sections/main.pug
+    include ../sections/grid.pug
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
