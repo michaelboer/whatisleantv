@@ -9,19 +9,14 @@ body
   background: $main
   font-family: $font
   overflow-x: hidden
-
-  > a
-    text-decoration: none
-    color: contrast($main)
-    padding: .5em
-    position: absolute
-    top: .5em
+  display: flex
+  flex-direction: column
 
 main
   display: flex
   justify-content: center
   align-items: center
-  height: 93%
+  height: 92.8vh
 
 header
   box-shadow: none
@@ -31,7 +26,3 @@ iframe
   width: 88%
   height: 88%
   border: 0
-  margin-left: -3em
-
-::-webkit-scrollbar
-  width: 0px
