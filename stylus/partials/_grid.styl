@@ -1,9 +1,7 @@
-%meta
-  margin-left: 1rem
-  color: white
-  transform: translateY(0)
-
-
+  meta =
+    margin-left: 1rem
+    color: white
+    transform: translateY(0)
 main
   display: flex
   flex-wrap: wrap
@@ -36,11 +34,11 @@ main
         background: linear-gradient(to bottom, transparent 35%, black 100%)
 
     .title
-      @extend %meta
+      {meta}
       font-size: 1.5em
       margin-top: -3.5em
     .desc
-      @extend %meta
+      {meta}
       display: inline-block
       font-size: .9em
       margin: 0 1em
