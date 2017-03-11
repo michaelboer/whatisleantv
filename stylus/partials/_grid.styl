@@ -1,49 +1,49 @@
-  meta =
-    margin-left 1rem
-    color white
-    transform translateY(0)
+$meta
+  margin-left: 1rem
+  color: white
+  transform: translateY(0)
 main
-  display flex
-  flex-wrap wrap
-  margin 1% 0
-  margin-left 6%
+  display: flex
+  flex-wrap: wrap
+  margin: 1% 0
+  margin-left: 6%
 
   img
-    width 100%
-    height 100%
+    width: 100%
+    height: 100%
 
   .item
-    background #ccc
-    position relative
-    margin 1%
-    width 20vw
-    height 11.25vw
+    background: #ccc
+    position: relative
+    margin: 1%
+    width: 20vw
+    height: 11.25vw
 
     a
-      display block
-      position relative
-      width 100%
-      height 100%
-      &after
-        content ''
-        position absolute
-        top 0
-        bottom 0
-        left 0
-        right 0
-        background linear-gradient(to bottom, transparent 35%, black 100%)
+      display: block
+      position: relative
+      width: 100%
+      height: 100%
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: linear-gradient(to bottom, transparent 35%, black 100%)
 
     .title
-      {meta}
-      font-size 1.5em
-      margin-top -3.5em
+      @extend $meta
+      font-size: 1.5em
+      margin-top: -3.5em
     .desc
-      {meta}
-      display inline-block
-      font-size .9em
-      margin 0 1em
-      line-height 1.5
-      overflow-y auto
-      width calc(100% - 32px)
-      height 3em
-      word-wrap break-word
+      @extend $meta
+      display: inline-block
+      font-size: .9em
+      margin: 0 1em
+      line-height: 1.5
+      overflow-y: auto
+      width: calc(100% - 32px)
+      height: 3em
+      word-wrap: break-word
