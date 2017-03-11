@@ -1,0 +1,28 @@
+@import 'partials/_config'
+@import 'partials/_functions'
+
+@import 'partials/_header'
+@import 'partials/_navigation'
+@import 'partials/_media_query'
+
+body
+  background $main
+  font-family $font
+  overflow-x hidden
+  display flex
+  flex-direction column
+
+main
+  display flex
+  justify-content center
+  align-items center
+  height 92.4vh
+
+header
+  box-shadow none
+  margin-top .3em
+
+iframe
+  width 88%
+  height @width
+  border 0
